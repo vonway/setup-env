@@ -1,3 +1,6 @@
 # setup-env
 setup env including vim tmux bashrc etc
-  todo
+
+  INSTALL
+  
+    ./install.sh
