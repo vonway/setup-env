@@ -19,7 +19,7 @@ cat ./bashrc >> ~/.bashrc
 
 echo "installing tmux"
 
-git@github.com:nmathewson/Libevent.git
+git clone git@github.com:nmathewson/Libevent.git
 
 cd Libevent
 
