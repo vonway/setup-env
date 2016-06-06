@@ -41,3 +41,13 @@ sudo make install
 
 
 
+echo "you may need to add /usr/local/lib to /etc/ld.so.conf"
+echo "  than exec ldconfig with root"
+
+
+
+# cat /etc/ld.so.conf
+# include ld.so.conf.d/*.conf
+# echo "/usr/local/lib" >> /etc/ld.so.conf
+# ldconfig
+
