@@ -5,7 +5,7 @@ git clone https://github.com/vonway/vim-setup.git
 
 cd vim-setup
 
-./install.sh
+./offline_install.sh
 
 cd ..
 
@@ -16,6 +16,14 @@ if [ -f "~/.bashrc" ]; then
 fi
 
 cat ./bashrc >> ~/.bashrc
+
+echo "installing gitconfig"
+
+if [ -f "~/.gitconfig" ]; then
+ mv ~/.gitconfig ~/.gitconfig.bak
+fi
+
+cat ./gitconfig >> ~/.gitconfig
 
 echo "installing tmux"
 
