@@ -1,7 +1,7 @@
 #/bin/bash
 echo "installing vimrc and vundle"
 
-git clone git@github.com:vonway/vim-setup.git
+git clone https://github.com/vonway/vim-setup.git
 
 cd vim-setup
 
@@ -19,7 +19,7 @@ cat ./bashrc >> ~/.bashrc
 
 echo "installing tmux"
 
-git clone git@github.com:nmathewson/Libevent.git
+git clone https://github.com/nmathewson/Libevent.git
 
 cd Libevent
 
@@ -29,7 +29,7 @@ sudo make install
 
 cd ..
 
-git clone git@github.com:tmux/tmux.git
+git clone https://github.com/tmux/tmux.git
 
 cd tmux
 
