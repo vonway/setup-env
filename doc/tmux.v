@@ -28,4 +28,12 @@ common usage:
   
   
   
-  
+screen
+--------------
+~/.screenrc:
+altscreen on
+term xterm
+
+the config file .screenrc make screen env like a normal shell
+which is used to DONOT show vi content after quit vi in a screen
+
