@@ -63,33 +63,11 @@ cat ./gitconfig >> ~/.gitconfig
 
 echo "installing tmux"
 
-git clone https://github.com/nmathewson/Libevent.git
-
-cd Libevent
-
-sh autogen.sh && ./configure && make
-
-sudo make install
-
-cd ..
-
-git clone https://github.com/tmux/tmux.git
-
-cd tmux
-
-sh autogen.sh
-
-sh autogen.sh && ./configure && make
-
-sudo make install
-
-
+sudo apt-get install tmux 
 
 echo "you may need to add /usr/local/lib to /etc/ld.so.conf"
 echo "  than exec ldconfig with root"
 echo "set your git user and email if you using git"
-
-
 
 # cat /etc/ld.so.conf
 # include ld.so.conf.d/*.conf
