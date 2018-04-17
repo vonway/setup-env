@@ -29,29 +29,6 @@ shell -$SHELL
 vbell off
 EOF
 
-cat >> ~/.gitconfig << EOF
-[alias]
-        st = status
-        ci = commit
-        co = checkout
-        br = branch
-        unstage = reset HEAD --
-        last = log -1 HEAD
-
-[user]
-        name = vonway
-        email = haisayu@gmail.com
-
-[core]
-        editor = vim
-        pager = less -r
-[diff]
-        tool = vimdiff
-[difftool]
-        prompt = false
- 
-EOF
-
 
 echo "installing gitconfig"
 
