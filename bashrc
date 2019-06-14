@@ -1,5 +1,23 @@
 # alias
 alias h=history
+alias +='pushd .'
+alias -='popd'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cd..='cd ..'
+alias h4='history | grep '
+alias l='ls -alF'
+alias la='ls -la'
+alias ll='ls -l'
+alias scr='screen'
+alias scrls='screen -ls'
+alias scrnew='screen -S '
+alias scrto='screen -r '
+alias synoff='pkill -e synergys'
+alias synon='synergys --daemon --restart --config ~/etc/synergy.conf'
+alias tmls='tmux ls'
+alias tmnew='tmux new -s '
+alias tmto='tmux attach -t '
 
 # postgresql
 export PATH=$PATH:/usr/local/pgsql/bin
