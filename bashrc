@@ -18,6 +18,8 @@ alias synon='synergys --daemon --restart --config ~/etc/synergy.conf'
 alias tmls='tmux ls'
 alias tmnew='tmux new -s '
 alias tmto='tmux attach -t '
+alias psme="ps -f -U `whoami`"
+alias ps4="ps aux | grep "
 
 # postgresql
 export PATH=$PATH:/usr/local/pgsql/bin
