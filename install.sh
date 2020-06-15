@@ -47,3 +47,20 @@ echo "set your git user and email if you using git"
 # echo "/usr/local/lib" >> /etc/ld.so.conf
 # ldconfig
 
+
+echo "installing i3wm"
+if [ -f "~/.config/i3/config" ]; then
+ mv ~/.config/i3/config ~/.config/i3/config.bak
+fi
+mkdir -p ~/.config/i3
+mkdir -p ~/.fonts
+cat i3/config > ~/.config/i3/config
+cp -rf i3/i3blocks.conf ~/.config/i3/i3blocks.conf
+cp -rf i3/fontawesome-webfont.ttf  ~/.fonts/fontawesome-webfont.ttf
+cp -rf i3/compton.conf  ~/.config/compton.conf
+
+
+
+
+
+

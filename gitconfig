@@ -1,5 +1,8 @@
 [user]
 	name = vonway
+	email = vonwayalex@163.com
+[user]
+	name = vonway
 	email = haisafish@139.com
 [push]
 	default = simple
@@ -10,3 +13,5 @@
 	br = branch
 	unstage = reset HEAD --
 	last = log -1 HEAD
+[core]
+	editor = vim
