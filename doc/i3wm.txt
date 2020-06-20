@@ -1,0 +1,95 @@
+
+##############################################################
+#			i3wm	
+##############################################################
+
+# clone the repository
+git clone https://www.github.com/Airblader/i3 i3-gaps
+cd i3-gaps
+
+# dependence
+sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \
+libxcb-util0-dev libxcb-icccm4-dev libyajl-dev \
+libstartup-notification0-dev libxcb-randr0-dev \
+libev-dev libxcb-cursor-dev libxcb-xinerama0-dev \
+libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev \
+autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev
+
+# compile & install
+autoreconf --force --install
+rm -rf build/
+mkdir -p build && cd build/
+
+# Disabling sanitizers is important for release versions!
+# The prefix and sysconfdir are, obviously, dependent on the distribution.
+../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+make
+sudo make install
+
+# add config file to ~/.config/i3/config
+
+
+##############################################################
+#			compton	
+##############################################################
+
+sudo apt install compton
+
+
+# add config file to ~/.config/compton.conf
+
+
+##############################################################
+#			polybar	
+##############################################################
+
+
+git clone --recursive https://github.com/polybar/polybar
+
+./build.sh --all-features
+
+# apt install dependence
+
+# add polybar config dir to ~/.config/polybar
+
+
+##############################################################
+#			rofi	
+##############################################################
+
+sudo apt install rofi	
+
+# add rofi config dir to ~/.config/rofi
+
+	
+
+##############################################################
+#			mpd	
+##############################################################
+sudo apt install mpd
+
+# add music to /var/lib/mpd/music
+
+# add all songs to playlist
+# mpc add /
+
+# mpc play
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

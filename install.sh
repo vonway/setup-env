@@ -32,7 +32,7 @@ fi
 cat ./gitconfig >> ~/.gitconfig
 
 echo "installing tmux"
-sudo apt-get install tmux 
+sudo apt-get install tmux -y
 if [ -f "~/.tmux.conf" ]; then
  mv ~/.tmux.conf ~/.tmux.conf.bak
 fi
@@ -54,10 +54,16 @@ if [ -f "~/.config/i3/config" ]; then
 fi
 mkdir -p ~/.config/i3
 mkdir -p ~/.fonts
-cat i3/config > ~/.config/i3/config
-cp -rf i3/i3blocks.conf ~/.config/i3/i3blocks.conf
-cp -rf i3/fontawesome-webfont.ttf  ~/.fonts/fontawesome-webfont.ttf
-cp -rf i3/compton.conf  ~/.config/compton.conf
+cp -rf i3/config/* > ~/.config/
+cp -rf i3/fonts/*  ~/.fonts/
+cp -rf i3/Scripts/*  ~/.Scripts/
+cp -rf i3/Pictures/*  ~/Pictures/
+
+sudo apt install i3blocks ranger compton feh rofi -y
+
+echo "Please install i3 gaps and polybar !!!!!!"
+
+
 
 
 
