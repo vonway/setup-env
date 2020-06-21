@@ -79,4 +79,11 @@ sudo apt install mpd
 sudo apt install flameshot
 
 
+# add chinese input method
+ibus-setup
+
+
+# install netease cloud music
+
+
 

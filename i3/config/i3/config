@@ -113,6 +113,7 @@ assign [class="Gnome-termianl"] $ws1
 assign [class="Nemo"] $ws4
 assign [class="Gimp"] $ws6
 assign [class="Inkscape"] $ws6
+assign [class="netease-cloud-music"] $ws8
 
 # Autostart applications
 #exec_always --no-startup-id flashfocus
@@ -120,7 +121,7 @@ exec_always --no-startup-id  ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/b-1.png
 exec_always --no-startup-id compton --config ~/.config/compton.conf
 exec_always --no-startup-id pkill clipit ; clipit 
-exec --no-startup-id ibus engine libpinyin
+exec_always --no-startup-id bash ibus engine libpinyin
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
