@@ -88,7 +88,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/theme
 bindsym $mod+shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Tab exec --no-startup-id rofi  -show window -config ~/.config/rofi/themes/Switch.rasi
 bindsym $mod+9 exec --no-startup-id $HOME/.config/rofi/scripts/i3stratch.py
-bindsym $mod+y exec --no-startup-id $HOME/.config/rofi/scripts/Powermenu.sh
+bindsym $mod+y exec --no-startup-id bash $HOME/.config/rofi/scripts/Powermenu.sh
 bindsym $mod+shift+m exec --no-startup-id bash $HOME/.config/rofi/scripts/mpdcontrol.sh
 # rofi-calc - useful calc tool
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
