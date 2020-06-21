@@ -89,7 +89,7 @@ bindsym $mod+shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Tab exec --no-startup-id rofi  -show window -config ~/.config/rofi/themes/Switch.rasi
 bindsym $mod+9 exec --no-startup-id $HOME/.config/rofi/scripts/i3stratch.py
 bindsym $mod+y exec --no-startup-id $HOME/.config/rofi/scripts/Powermenu.sh
-bindsym $mod+shift+m exec --no-startup-id $HOME/.config/rofi/scripts/mpdcontrol.sh
+bindsym $mod+shift+m exec --no-startup-id bash $HOME/.config/rofi/scripts/mpdcontrol.sh
 # rofi-calc - useful calc tool
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
 
@@ -105,10 +105,11 @@ bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+d exec "emacsclient -c"
 
 # Start applications on specific workspaces
-assign [class="code"] $ws1
+assign [class="code"] $ws2
 assign [class="Emacs"] $ws1
-assign [class="irefox"] $ws2
-assign [class="Termite"] $ws3
+assign [class="irefox"] $ws4
+assign [class="Google-chrome"] $ws4
+assign [class="Gnome-termianl"] $ws1
 assign [class="Nemo"] $ws4
 assign [class="Gimp"] $ws6
 assign [class="Inkscape"] $ws6
@@ -118,14 +119,14 @@ assign [class="Inkscape"] $ws6
 exec_always --no-startup-id  ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/b-1.png
 exec_always --no-startup-id compton --config ~/.config/compton.conf
-exec_always --no-startup-id clipit 
+exec_always --no-startup-id pkill clipit ; clipit 
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 
 # Specific applications configration
@@ -183,7 +184,8 @@ bindsym $mod+shift+n border normal 1
 floating_modifier $mod
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 bindsym $mod+F4 kill
 
 # focus_follows_mouse no
@@ -220,7 +222,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+h split h
 bindsym $mod+v split v
-bindsym $mod+q split toggle
+# bindsym $mod+q split toggle
 
 bindsym $mod+z exec --no-startup-id flash_window
 
