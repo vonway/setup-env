@@ -76,20 +76,7 @@ sudo apt install mpd
 # mpc play
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sudo apt install flameshot
 
 
 
