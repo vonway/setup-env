@@ -9,6 +9,7 @@ mpadding = 1
 margin = 3 
 
 [bar/i3mainbar]
+monitor = ${env:MONITOR:}
 background = ${colors.xbg}
 foreground = ${colors.xfg}
 

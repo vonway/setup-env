@@ -118,7 +118,7 @@ assign [class="netease-cloud-music"] $ws8
 # Autostart applications
 #exec_always --no-startup-id flashfocus
 exec_always --no-startup-id  ~/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-scale ~/Pictures/b-1.png
+exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/*
 exec_always --no-startup-id compton --config ~/.config/compton.conf
 exec_always --no-startup-id pkill clipit ; clipit 
 exec_always --no-startup-id bash ibus engine libpinyin
@@ -264,8 +264,8 @@ bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # hide/unhide i3status bar
-#bindsym $mod+m bar mode toggle
-bindsym $mod+m exec polybar-msg cmd toggle
+# bindsym $mod+m bar mode toggle
+# bindsym $mod+m exec polybar-msg cmd toggle
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -318,6 +318,10 @@ bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
+
+bindsym $mod+p move workspace to output right
+bindsym $mod+Shift+p move workspace to output left
+
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -356,7 +360,12 @@ mode "resize" {
 
 bindsym $mod+shift+x exec i3lock
 
+# mark container
+# read 1 character and mark the current window with this character
+bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 
+# read 1 character and go to the window with the character
+bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 
 ##########################
 #

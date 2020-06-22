@@ -59,7 +59,7 @@ cp -rf i3/fonts/*  ~/.fonts/
 cp -rf i3/Scripts/*  ~/.Scripts/
 cp -rf i3/Pictures/*  ~/Pictures/
 
-sudo apt install i3blocks ranger compton feh rofi flameshot -y
+sudo apt install i3blocks ranger compton feh rofi flameshot arandr -y
 
 echo "Please install i3 gaps and polybar !!!!!!"
 

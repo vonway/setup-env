@@ -85,5 +85,33 @@ ibus-setup
 
 # install netease cloud music
 
+# install libinput-gestrues
+sudo apt install libinput-tools
+sudo gpasswd -a $USER input
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestrues
+sudo make install
+sudo ./libinput-gestures-setup install
+
+libinput-gestures-setup autostart
+libinput-gestures-setup start
+
+
+####  mutil screen
+sudo apt install arandr
+
+https://github.com/polybar/polybar/issues/763
+
+# xrandr --output HDMI-1 --right-of LVDS-1 --auto
+# xrandr --output HDMI-1 --mode 1920x1080 --same-as LVDS-1 --auto
+
+
+# wallpapers
+https://github.com/linuxdeepin/deepin-wallpapers
+
+
+
+
+
 
 
