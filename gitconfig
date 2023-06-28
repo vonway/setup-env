@@ -1,9 +1,7 @@
 [user]
 	name = vonway
 	email = vonwayalex@163.com
-[user]
-	name = vonway
-	email = haisafish@139.com
+
 [push]
 	default = simple
 [alias]
